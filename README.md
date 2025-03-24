@@ -4,6 +4,9 @@ A Python PoC using [Browser Use](https://docs.browser-use.com/) to create browse
 
 ## Setup
 
+0. Install uv (required for dependency management):
+See the [uv installation guide](https://docs.astral.sh/uv/getting-started/installation/).
+
 1. Create a virtual environment:
 ```bash
 uv venv --python 3.11
