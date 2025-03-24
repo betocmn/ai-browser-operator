@@ -28,17 +28,31 @@ uv pip install browser-use
 uv run playwright install
 ```
 
-5. Set up your API keys in a `.env` file:
+5. Set up your API keys and credentials in a `.env` file:
 ```
-OPENAI_API_KEY=your_openai_api_key
+# Copy from example file
+cp .env.example .env
+# Then edit .env with your credentials
 ```
 
 ## Usage
 
-Run the agent:
+### LLM Pricing Comparison Agent
+Run the agent to compare LLM pricing:
 ```bash
-python agent.py
+python src/pricing_comparison_agent.py
 ```
+
+### Hacker News Karma Checker
+Run the agent to log in to Hacker News and check your karma:
+```bash
+python src/log_in_to_hacker_news_and_get_my_karma.py
+```
+
+For the Hacker News karma checker to work:
+- Ensure your HN_USERNAME and HN_PASSWORD are set in the .env file
+- The script will automatically close any running Chrome instances
+- A new Chrome instance will be launched with a separate profile
 
 ## Documentation
 
